@@ -88,29 +88,14 @@ f.write(n,20);
 f.write(id,9);
 
 }
-void update2(fstream& f, char name[]) {
-    char n[20], id[9];
-    cout << "New name: "; cin >> n;
-    cout << "New ID: "; cin >> id;
-
-    int pos = number(f, name);
-    if (pos != -1) {
-        f.seekp((pos - 1) * 29, ios::beg); // Calculate the position based on record number
-        f.write(n, 20);
-        f.write(id, 9);
-        cout << "Medicine updated successfully\n";
-    } else {
-        cout << "Medicine not found\n";
-    }
-}
-
 
 int main()
 {
 fstream f;
 f.open(PATH2,ios::in|ios::out|ios::app|ios::binary);
-char aa[20]="a";
-update2(f,aa);
+/*
+write here
+*/
 
 f.close();
 }
